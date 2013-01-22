@@ -61,6 +61,8 @@ Any subsequent scripts using tsQuery as a dependency should use `$TS.ready()` or
 
 <hr/>
 
+__NOTE:__ _This library only works within a data capture form context. It expects certain global IW* object and functions to exist, which are always available in form contexts_
+
 ## Building
 
 Building with [GruntJS](http://gruntjs.com) is not required, but if you have it, you can simply run `grunt` from within the project directory to generate a linted, minified version at `./build/tsquery.min.js`
