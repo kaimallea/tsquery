@@ -93,7 +93,7 @@
 
             for (prop in this) {
                 if ( !isNaN(prop) && this.hasOwnProperty(prop) ) {
-                    callback(i++, this[prop]);
+                    callback.call(this[prop], i++);
                 }
             }
 
