@@ -28,8 +28,11 @@ tsQuery is a JavaScript library that wraps around the TeamSite FormAPI to simpli
 
 - Multiple item addressing
 
-		// The number of image replicants is arbitrary,
+		// The number of photo replicants is arbitrary,
 		// but there's a special selector to select them all
+		//
+		// Here we select the all 'image' items from any existing
+		// photo replicants
 		$TS('/photos/photo[*]/image');
 
 		// How many were retrieved?
