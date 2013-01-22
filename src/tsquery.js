@@ -178,19 +178,19 @@
 
                 this._setupEvent(itemName, eventName);
 
-                $TS.fn._eventMap[itemName][eventName].push(handler);
+                $TS.fn._eventMap[itemName][eventName].push(function() { handler.apply(arguments[0], arguments); });
 
                 IWEventRegistry.addItemHandler(itemName, eventName, $TS.fn._eventInitiators[itemName][eventName]);
             }
 
             // Multiple items
             if (this.length > 1) {
-                this.each(function(i, v) {
-                    $TS.fn._setupEvent(v.getName(), eventName);
+                this.each(function(index) {
+                    $TS.fn._setupEvent(this.getName(), eventName);
 
-                    $TS.fn._eventMap[v.getName()][eventName].push(handler);
+                    $TS.fn._eventMap[this.getName()][eventName].push(function() { handler.apply(arguments[0], arguments); });
 
-                    IWEventRegistry.addItemHandler(v.getName(), eventName, $TS.fn._eventInitiators[v.getName()][eventName]);
+                    IWEventRegistry.addItemHandler(this.getName(), eventName, $TS.fn._eventInitiators[this.getName()][eventName]);
                 });
             }
 
