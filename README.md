@@ -71,9 +71,24 @@ Any subsequent scripts using tsQuery as a dependency should use `$TS.ready()` or
 		// .. your code ..
 	});
 
-<hr/>
 
 __NOTE:__ _This library only works within a data capture form context. It expects certain global IW* object and functions to exist, which are always available in form contexts_
+
+<hr/>
+
+## Browser Support
+
+Testing is difficult since the script context of a data capture form exists within an iframe in the form window.
+
+I've manually tested this library myself in:
+
+ - IE8 ✔
+ - IE9 ✔
+ - Chrome 24.0.1312.52 m ✔
+ - Firefox 16.0.2 ✔
+ - Opera 12.10 ✔
+
+<hr/>
 
 ## Building
 
