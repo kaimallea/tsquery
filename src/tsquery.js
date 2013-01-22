@@ -1,3 +1,8 @@
+/**
+ * tsQuery
+ * Copyright 2013 Kai Mallea
+ * MIT Licensed
+ */
 (function(window) {
 
     var $TS = window.$TS = function(selector) {
