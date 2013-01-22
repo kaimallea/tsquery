@@ -32,6 +32,18 @@ tsQuery is a JavaScript library that wraps around the TeamSite FormAPI to simpli
 		// but there's a special selector to select them all
 		$TS('/photos/photo[*]/image');
 
+		// How many were retrieved?
+		$TS('/photos/photo[*]/image').length;
+
+		// Store query in a variable for reuse
+		var $photos = $TS('/photos/photo[*]/image');
+		
+		if ($photos.length) {
+			$photos.each(function (index) {
+				console.log('Photo #' + index + ': ' + this.getValue()); // 'this' automatically bound to current IWItem in context
+			});
+		}
+
 - Simplified event management via `.on()`
 
 		// Add a handler to each photo replicant, listening
