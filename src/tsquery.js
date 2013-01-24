@@ -208,5 +208,3 @@
 $TS.fn.init.prototype = $TS.fn;
 
 IWEventRegistry.addFormHandler('onFormInit', $TS.fn._onFormReady);
-IWDatacapture.enableImagePreview(true);
-
